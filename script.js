@@ -1,20 +1,6 @@
-// Fade-in sections on scroll
-const faders = document.querySelectorAll('.fade-in');
-
-const appearOnScroll = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  {
-    threshold: 0.15,
-  }
-);
-
-faders.forEach(section => {
-  appearOnScroll.observe(section);
-});
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
