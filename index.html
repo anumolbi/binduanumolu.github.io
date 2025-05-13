@@ -10,6 +10,7 @@
 </head>
 <body>
 
+  <!-- NAVIGATION -->
   <nav id="desktop-nav">
     <div class="logo">Bindu Anumolu
       <p>Analyzing and Visualizing Data to Drive Smarter Decisions</p>
@@ -17,6 +18,7 @@
     <div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -32,6 +34,7 @@
       </div>
       <div class="menu-links">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
         <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
         <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
@@ -39,6 +42,7 @@
     </div>
   </nav>
 
+  <!-- PROFILE -->
   <section id="profile">
     <div class="section__text">
       <p class="section__text__p1">Hello, I'm</p>
@@ -53,78 +57,93 @@
         </button>
       </div>
       <div id="socials-container">
-        <img
-          src="./assets/linkedin.png"
-          alt="LinkedIn"
-          class="icon"
-          onclick="location.href='https://www.linkedin.com/in/binduanumolu'"
-        />
-        <img
-          src="./assets/github.png"
-          alt="GitHub"
-          class="icon"
-          onclick="location.href='https://github.com/anumolbi'"
-        />
+        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon" onclick="location.href='https://www.linkedin.com/in/binduanumolu'" />
+        <img src="./assets/github.png" alt="GitHub" class="icon" onclick="location.href='https://github.com/anumolbi'" />
       </div>
     </div>
   </section>
 
-<section id="about">
-  <p class="section__text__p1">Get To Know More</p>
-  <h1 class="title">About Me</h1>
-  <div class="about-details-container">
-    <div class="text-container">
-      <p>
-        Hi, I'm <strong>Bindu Anumolu</strong>, a data analyst with 3+ years of experience in data extraction, transformation,
-        and visualization. I'm passionate about building scalable pipelines, creating compelling dashboards, and translating data into business outcomes.
-      </p>
-    </div>
-
-    <div class="about-containers" style="margin-top: 2rem; justify-content: center; gap: 2rem;">
-      <div class="details-container">
-        <img src="./assets/education.png" alt="Education icon" class="icon" />
-        <h3>Master’s in Information Technology</h3>
-        <p>University of Cincinnati<br><small>Aug 2023 – Dec 2024 | GPA: 3.93</small></p>
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="about-details-container">
+      <div class="text-container">
+        <p>
+          Hi, I'm <strong>Bindu Anumolu</strong>, a data analyst with 3+ years of experience in data extraction, transformation,
+          and visualization. I'm passionate about building scalable pipelines, creating compelling dashboards, and translating data into business outcomes.
+        </p>
       </div>
-      <div class="details-container">
-        <img src="./assets/education.png" alt="Education icon" class="icon" />
-        <h3>Bachelor’s in Information Technology</h3>
-        <p>Lakireddy Bali Reddy College of Engineering<br><small>Jul 2019 – Apr 2023</small></p>
+
+      <div class="about-containers" style="margin-top: 2rem; display: grid; gap: 1.5rem;">
+        <div class="details-container" style="display: flex; gap: 1rem; align-items: flex-start;">
+          <img src="./assets/education.png" alt="Education icon" class="icon" style="margin-top: 5px;" />
+          <div>
+            <h3>Master’s in Information Technology</h3>
+            <p>University of Cincinnati<br><small>Aug 2023 – Dec 2024 | GPA: 3.93</small></p>
+          </div>
+        </div>
+        <div class="details-container" style="display: flex; gap: 1rem; align-items: flex-start;">
+          <img src="./assets/education.png" alt="Education icon" class="icon" style="margin-top: 5px;" />
+          <div>
+            <h3>Bachelor’s in Information Technology</h3>
+            <p>Lakireddy Bali Reddy College of Engineering<br><small>Jul 2019 – Apr 2023</small></p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-
-  <section id="experience">
+  <!-- SKILLS -->
+  <section id="skills">
     <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="skills-grid" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;">
+      <span class="details-container">SQL</span>
+      <span class="details-container">Python</span>
+      <span class="details-container">Power BI</span>
+      <span class="details-container">Tableau</span>
+      <span class="details-container">Excel</span>
+      <span class="details-container">Machine Learning</span>
+      <span class="details-container">AWS</span>
+      <span class="details-container">Google Cloud</span>
+      <span class="details-container">Snowflake</span>
+      <span class="details-container">ETL</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <p class="section__text__p1">Professional Background</p>
     <h1 class="title">Experience</h1>
     <div class="experience-details-container">
-      <div class="about-containers">
-        <div class="details-container">
-          <h2 class="experience-sub-title">Data Analyst</h2>
-          <div class="article-container">
-            <article><h3>SQL</h3><p>Experienced</p></article>
-            <article><h3>Python</h3><p>Experienced</p></article>
-            <article><h3>Power BI</h3><p>Experienced</p></article>
-            <article><h3>Tableau</h3><p>Experienced</p></article>
-            <article><h3>Excel</h3><p>Experienced</p></article>
-            <article><h3>Machine Learning</h3><p>Intermediate</p></article>
-          </div>
-        </div>
-        <div class="details-container">
-          <h2 class="experience-sub-title">Cloud & ETL</h2>
-          <div class="article-container">
-            <article><h3>AWS</h3><p>Intermediate</p></article>
-            <article><h3>ETL Tools</h3><p>Intermediate</p></article>
-            <article><h3>Snowflake</h3><p>Intermediate</p></article>
-            <article><h3>Git</h3><p>Intermediate</p></article>
-          </div>
-        </div>
+      <div class="details-container">
+        <h3>Data Analyst – Target Corporation</h3>
+        <p><em>May 2024 – Present | USA</em></p>
+        <ul>
+          <li>Designed Tableau dashboards to monitor sales and inventory.</li>
+          <li>Analyzed sales data using SQL, improving promotional revenue by 7%.</li>
+          <li>Forecasted demand using ARIMA for 50+ products.</li>
+          <li>Collaborated with stakeholders to define reporting needs in Agile sprints.</li>
+          <li>Conducted ad hoc pricing analysis, improving margins by 6%.</li>
+        </ul>
+      </div>
+
+      <div class="details-container">
+        <h3>Data Analyst – Deloitte</h3>
+        <p><em>Aug 2021 – Jul 2023 | India</em></p>
+        <ul>
+          <li>Processed 500GB+ data using SQL, reducing preparation time by 23%.</li>
+          <li>Automated reporting with Python, saving 10+ hours monthly.</li>
+          <li>Built real-time dashboards in Tableau for executives.</li>
+          <li>Applied clustering to reduce customer churn by 10%.</li>
+          <li>Led data quality initiatives and KPI development in Agile teams.</li>
+        </ul>
       </div>
     </div>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
     <p class="section__text__p1">Browse My Recent</p>
     <h1 class="title">Projects</h1>
@@ -132,14 +151,14 @@
       <div class="about-containers">
         <div class="details-container color-container">
           <h2 class="experience-sub-title project-title">Job Application Tracker</h2>
-          <p>Full-stack project using React, Python, and MongoDB to track job applications.</p>
+          <p>Full-stack React + Python + MongoDB project for job tracking.</p>
           <div class="btn-container">
             <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/anumolbi/job-application-tracker'">GitHub</button>
           </div>
         </div>
         <div class="details-container color-container">
           <h2 class="experience-sub-title project-title">Suicide Ideation Detection</h2>
-          <p>NLP-based deep learning model to detect suicidal ideation in text data using TensorFlow.</p>
+          <p>Deep learning NLP project using TensorFlow to detect mental health signals.</p>
           <div class="btn-container">
             <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/anumolbi/suicide-ideation-nlp'">GitHub</button>
           </div>
@@ -148,6 +167,7 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
@@ -163,10 +183,12 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <nav>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
