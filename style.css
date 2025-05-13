@@ -12,151 +12,179 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #f7f9fc;
+  background: #f9f9f9;
   color: #222;
 }
 
-p {
-  color: #555;
-}
-
-a,
-.btn {
-  transition: all 300ms ease;
-}
-
-/* -------------------- NAVIGATION -------------------- */
-nav,
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-
+/* --------- Navigation --------- */
 nav {
-  justify-content: space-around;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 10vh;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 0 2rem;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: fixed;
   width: 100%;
-  z-index: 999;
-}
-
-.nav-links {
-  gap: 2rem;
-  list-style: none;
-  font-size: 1rem;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #0077b6;
-  text-decoration: underline;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
 }
 
 .logo p {
   font-size: 0.75rem;
-  font-weight: normal;
-  color: #666;
+  font-weight: 400;
+  color: #555;
 }
 
-/* -------------------- HAMBURGER NAV -------------------- */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-weight: 500;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #0077b6;
+  text-decoration: underline;
+}
+
+/* --------- Hamburger --------- */
 #hamburger-nav {
   display: none;
 }
 
-/* -------------------- SECTIONS -------------------- */
+.hamburger-menu {
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.hamburger-icon span {
+  height: 3px;
+  background: black;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  flex-direction: column;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+
+.menu-links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.menu-links a {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* --------- Section Styles --------- */
 section {
-  padding: 6em 10%;
-  min-height: fit-content;
+  padding: 6rem 10%;
+  margin-top: 5vh;
 }
 
 .title {
+  text-align: center;
   font-size: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
   color: #0077b6;
-}
-
-.section__text {
-  text-align: center;
-  margin: auto;
+  margin-bottom: 1.5rem;
 }
 
 .section__text__p1 {
-  font-weight: 600;
-  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 500;
   color: #0077b6;
+  margin-bottom: 0.5rem;
 }
 
 .section__text__p2 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #444;
 }
 
-/* -------------------- BUTTONS -------------------- */
+/* --------- Buttons --------- */
 .btn-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 1.5rem 0;
+  margin-top: 1.5rem;
 }
 
 .btn {
-  font-weight: 600;
   padding: 0.75rem 1.5rem;
   border-radius: 25px;
+  border: none;
+  font-weight: 600;
   cursor: pointer;
-  border: 2px solid #333;
-  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn-color-1 {
-  background-color: #0077b6;
+  background: #0077b6;
   color: #fff;
-  border: none;
 }
 
 .btn-color-1:hover {
-  background-color: #005b91;
+  background: #005a91;
 }
 
 .btn-color-2 {
-  background-color: transparent;
-  color: #333;
+  background: transparent;
+  border: 2px solid #0077b6;
+  color: #0077b6;
 }
 
 .btn-color-2:hover {
-  background-color: #0077b6;
+  background: #0077b6;
   color: #fff;
-  border: none;
 }
 
-/* -------------------- SOCIAL ICONS -------------------- */
+/* --------- Social Icons --------- */
 #socials-container {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
   margin-top: 1rem;
+  gap: 1rem;
 }
 
 .icon {
-  width: 2rem;
   height: 2rem;
+  width: 2rem;
   cursor: pointer;
 }
 
-/* -------------------- EXPERIENCE -------------------- */
+/* --------- Experience --------- */
 .experience-details-container {
   display: flex;
   flex-direction: column;
@@ -165,57 +193,46 @@ section {
 
 .details-container {
   background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.experience-sub-title {
-  color: #0077b6;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #0077b6;
 }
 
 .article-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 1.5rem;
+  gap: 1.2rem;
+  justify-content: center;
 }
 
 article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   width: 120px;
 }
 
-article h3 {
-  margin: 0.3rem 0;
-}
-
-/* -------------------- PROJECTS -------------------- */
+/* --------- Projects --------- */
 .color-container {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 1rem;
+  background: #fff;
   padding: 1.5rem;
+  border-radius: 1rem;
   margin-bottom: 2rem;
-  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .project-title {
-  margin: 1rem 0;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: #0077b6;
+  margin: 1rem 0;
 }
 
 .project-btn {
-  background: transparent;
-  border: 1px solid #0077b6;
+  border: 2px solid #0077b6;
   color: #0077b6;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .project-btn:hover {
@@ -223,19 +240,87 @@ article h3 {
   color: #fff;
 }
 
-/* -------------------- CONTACT -------------------- */
-#contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* --------- Contact --------- */
 .contact-info-upper-container {
   display: flex;
+  justify-content: center;
   gap: 2rem;
   background: #fff;
   padding: 1.5rem 2rem;
   border-radius: 1rem;
-  border: 1px solid #ddd;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  margin-top: 1.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contact-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.email-icon {
+  width: 2.2rem;
+}
+
+/* --------- Footer --------- */
+footer {
+  background: #e0f7fa;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+footer .nav-links {
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* --------- Responsive --------- */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  section {
+    padding: 4rem 5%;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  #desktop-nav {
+    display: none;
+  }
+
+  .menu-links.open {
+    display: flex;
+  }
+}
