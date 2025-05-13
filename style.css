@@ -330,4 +330,17 @@ footer p {
     display: flex;
   }
 }
+.details-container {
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.experience-box article {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  margin: 0.5rem 0;
+}
 
