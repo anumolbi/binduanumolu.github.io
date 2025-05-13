@@ -78,22 +78,44 @@ section {
 
 .title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #0077b6;
   margin-bottom: 1.5rem;
+  font-weight: 700;
 }
 
 .section__text__p1 {
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.1rem;
   color: #0077b6;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 
 .section__text__p2 {
   text-align: center;
   font-size: 1.25rem;
   color: #444;
+}
+
+.text-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --- BUTTONS --- */
@@ -157,39 +179,52 @@ section {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* --- EXPERIENCE & PROJECTS --- */
+/* --- EXPERIENCE SECTION IN BOX STYLE --- */
 .experience-details-container {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
-.details-container {
+.experience-box {
   background: #fff;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #0077b6;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
-.project-title {
-  color: #0077b6;
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+.experience-box h2 {
+  margin-bottom: 1rem;
+  color: #444;
 }
 
-.project-btn {
-  border: 2px solid #0077b6;
-  color: #0077b6;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
+.experience-box article {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.75rem 0;
+  justify-content: start;
 }
 
-.project-btn:hover {
-  background: #0077b6;
-  color: #fff;
+.experience-box article .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.experience-box article h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.experience-box article p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666;
 }
 
 /* --- CONTACT --- */
@@ -252,6 +287,11 @@ footer p {
 
   section {
     padding: 4rem 5%;
+  }
+
+  .experience-details-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .contact-info-upper-container {
