@@ -302,3 +302,32 @@ footer p {
     flex-direction: column;
   }
 }
+#hamburger-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #desktop-nav {
+    display: none;
+  }
+  #hamburger-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+  }
+  .menu-links.open {
+    display: flex;
+  }
+}
+
