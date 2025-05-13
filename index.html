@@ -2,72 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bindu Anumolu | Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
-  <header>
-    <div class="nav-container">
-      <h1>Bindu Anumolu</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
+
+  <nav id="desktop-nav">
+    <div class="logo">Bindu Anumolu
+      <p>Analyzing and Visualizing Data to Drive Smarter Decisions</p>
     </div>
-  </header>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <main>
-    <section id="about" class="fade-in">
-      <h2>About Me</h2>
-      <p>I’m a data analyst with 3+ years of experience turning raw data into valuable insights using Python, SQL, Power BI, and Tableau.</p>
-    </section>
+  <nav id="hamburger-nav">
+    <div class="logo">Bindu Anumolu</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
 
-    <section id="skills" class="fade-in">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <span>Python</span>
-        <span>SQL</span>
-        <span>Power BI</span>
-        <span>Tableau</span>
-        <span>Machine Learning</span>
-        <span>AWS</span>
-        <span>Excel</span>
+  <section id="profile">
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Bindu Anumolu</h1>
+      <p class="section__text__p2">Data Analyst</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Bindu_Anumolu_Resume.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='#contact'">
+          Contact Info
+        </button>
       </div>
-    </section>
+      <div id="socials-container">
+        <img
+          src="./assets/linkedin.png"
+          alt="LinkedIn"
+          class="icon"
+          onclick="location.href='https://www.linkedin.com/in/binduanumolu'"
+        />
+        <img
+          src="./assets/github.png"
+          alt="GitHub"
+          class="icon"
+          onclick="location.href='https://github.com/anumolbi'"
+        />
+      </div>
+    </div>
+  </section>
 
-    <section id="projects" class="fade-in">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Job Application Tracker</h3>
-        <p>Built using React, Python, and MongoDB to help users efficiently track job applications.</p>
-        <a href="#" target="_blank">View GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Fraud Detection System</h3>
-        <p>Real-time fraud detection using anomaly models deployed on AWS Lambda with 98% accuracy.</p>
-        <a href="#" target="_blank">View GitHub</a>
-      </div>
-    </section>
+  <section id="about">
+  <p class="section__text__p1">Get To Know More</p>
+  <h1 class="title">About Me</h1>
+  <div class="about-details-container">
+    <div class="text-container">
+      <p>
+        Hi, I'm <strong>Bindu Anumolu</strong>, a data analyst with 3+ years of experience in data extraction, transformation,
+        and visualization. I'm passionate about building scalable pipelines, creating compelling dashboards, and translating data into business outcomes.
+      </p>
+    </div>
 
-    <section id="contact" class="fade-in">
-      <h2>Contact</h2>
-      <div class="contact-icons">
-        <a href="mailto:binduanumolu24@gmail.com" title="Email">
-          📧
-        </a>
-        <a href="https://www.linkedin.com/in/binduanumolu" target="_blank" title="LinkedIn">
-          💼
-        </a>
+    <div class="about-containers" style="margin-top: 2rem; justify-content: center; gap: 2rem;">
+      <div class="details-container">
+        <img src="./assets/education.png" alt="Education icon" class="icon" />
+        <h3>Master’s in Information Technology</h3>
+        <p>University of Cincinnati<br><small>Aug 2023 – Dec 2024 | GPA: 3.93</small></p>
       </div>
-    </section>
-  </main>
+      <div class="details-container">
+        <img src="./assets/education.png" alt="Education icon" class="icon" />
+        <h3>Bachelor’s in Information Technology</h3>
+        <p>Lakireddy Bali Reddy College of Engineering<br><small>Jul 2019 – Apr 2023</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Data Analyst</h2>
+          <div class="article-container">
+            <article><h3>SQL</h3><p>Experienced</p></article>
+            <article><h3>Python</h3><p>Experienced</p></article>
+            <article><h3>Power BI</h3><p>Experienced</p></article>
+            <article><h3>Tableau</h3><p>Experienced</p></article>
+            <article><h3>Excel</h3><p>Experienced</p></article>
+            <article><h3>Machine Learning</h3><p>Intermediate</p></article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Cloud & ETL</h2>
+          <div class="article-container">
+            <article><h3>AWS</h3><p>Intermediate</p></article>
+            <article><h3>ETL Tools</h3><p>Intermediate</p></article>
+            <article><h3>Snowflake</h3><p>Intermediate</p></article>
+            <article><h3>Git</h3><p>Intermediate</p></article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Job Application Tracker</h2>
+          <p>Full-stack project using React, Python, and MongoDB to track job applications.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/anumolbi/job-application-tracker'">GitHub</button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Suicide Ideation Detection</h2>
+          <p>NLP-based deep learning model to detect suicidal ideation in text data using TensorFlow.</p>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/anumolbi/suicide-ideation-nlp'">GitHub</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email" class="icon contact-icon email-icon" />
+        <p><a href="mailto:binduanumolu24@gmail.com">binduanumolu24@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/binduanumolu" target="_blank">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>© 2025 Bindu Anumolu</p>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <p>© 2025 Bindu Anumolu. All Rights Reserved.</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
