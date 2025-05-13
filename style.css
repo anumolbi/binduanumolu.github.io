@@ -1,3 +1,9 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -5,40 +11,64 @@ body {
   color: #222;
 }
 
+/* Fixed Header Navbar */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background: #222;
   color: #fff;
-  padding: 3em 1em;
-  text-align: center;
+  z-index: 1000;
+  padding: 1em 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-header nav a {
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1em;
+}
+
+header h1 {
+  font-size: 1.4em;
+  margin: 0;
+}
+
+nav a {
   color: #fff;
-  margin: 0 1em;
+  margin: 0 0.8em;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
 }
 
-header nav a:hover {
+nav a:hover {
   text-decoration: underline;
+}
+
+/* Sections */
+main {
+  padding-top: 5em;
 }
 
 section {
   padding: 4em 10%;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
 }
 
 section h2 {
   font-size: 2em;
-  margin-bottom: 0.5em;
   color: #0077b6;
+  margin-bottom: 0.5em;
 }
 
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
 }
 
 .skills-grid span {
@@ -46,13 +76,14 @@ section h2 {
   color: #fff;
   padding: 0.5em 1em;
   border-radius: 5px;
+  font-weight: 500;
 }
 
 .project-card {
   background: #fff;
   padding: 1.5em;
   border-radius: 10px;
-  margin: 1em 0;
+  margin-bottom: 1.5em;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
@@ -71,17 +102,55 @@ section h2 {
   text-decoration: underline;
 }
 
+/* Contact Icons */
+.contact-icons {
+  font-size: 2em;
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: #0077b6;
+  transition: transform 0.2s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Footer */
 footer {
   background: #eee;
   text-align: center;
-  padding: 1.5em;
-  margin-top: 4em;
+  padding: 2em 0;
+  margin-top: 2em;
 }
 
+/* Fade-In Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Navbar */
 @media (max-width: 768px) {
-  header nav a {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
     display: block;
-    margin: 0.5em 0;
+    margin: 0.3em 0;
   }
 
   section {

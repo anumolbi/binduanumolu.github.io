@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bindu Anumolu | Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header id="home">
-    <div class="container">
+  <header>
+    <div class="nav-container">
       <h1>Bindu Anumolu</h1>
-      <p>Data Analyst | Data-Driven Decisions</p>
       <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -20,44 +20,51 @@
     </div>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a data analyst with 3+ years of experience turning raw data into valuable insights using Python, SQL, Power BI, and Tableau.</p>
-  </section>
+  <main>
+    <section id="about" class="fade-in">
+      <h2>About Me</h2>
+      <p>I’m a data analyst with 3+ years of experience turning raw data into valuable insights using Python, SQL, Power BI, and Tableau.</p>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <span>Python</span>
-      <span>SQL</span>
-      <span>Power BI</span>
-      <span>Tableau</span>
-      <span>Machine Learning</span>
-      <span>AWS</span>
-      <span>Excel</span>
-    </div>
-  </section>
+    <section id="skills" class="fade-in">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Power BI</span>
+        <span>Tableau</span>
+        <span>Machine Learning</span>
+        <span>AWS</span>
+        <span>Excel</span>
+      </div>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card">
-      <h3>Job Application Tracker</h3>
-      <p>Built using React, Python, and MongoDB to help users efficiently track job applications.</p>
-      <a href="#" target="_blank">View GitHub</a>
-    </div>
-    <div class="project-card">
-      <h3>Fraud Detection System</h3>
-      <p>Real-time fraud detection using anomaly models deployed on AWS Lambda with 98% accuracy.</p>
-      <a href="#" target="_blank">View GitHub</a>
-    </div>
-  </section>
+    <section id="projects" class="fade-in">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Job Application Tracker</h3>
+        <p>Built using React, Python, and MongoDB to help users efficiently track job applications.</p>
+        <a href="#" target="_blank">View GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Fraud Detection System</h3>
+        <p>Real-time fraud detection using anomaly models deployed on AWS Lambda with 98% accuracy.</p>
+        <a href="#" target="_blank">View GitHub</a>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:binduanumolu24@gmail.com">binduanumolu24@gmail.com</a></p>
-    <p><a href="https://www.linkedin.com/in/binduanumolu" target="_blank">LinkedIn Profile</a></p>
-    <p>Resume: <a href="Bindu_Anumolu_Resume.pdf" download>Download Resume</a></p>
-  </section>
+    <section id="contact" class="fade-in">
+      <h2>Contact</h2>
+      <div class="contact-icons">
+        <a href="mailto:binduanumolu24@gmail.com" title="Email">
+          📧
+        </a>
+        <a href="https://www.linkedin.com/in/binduanumolu" target="_blank" title="LinkedIn">
+          💼
+        </a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Bindu Anumolu</p>
