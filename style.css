@@ -1,3 +1,4 @@
+/* ======== Bindu Anumolu | style.css ======== */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -16,7 +17,16 @@ body {
   color: #222;
 }
 
-/* --------- Navigation --------- */
+p {
+  color: #555;
+}
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* --- NAVIGATION --- */
 nav {
   display: flex;
   justify-content: space-between;
@@ -60,54 +70,7 @@ nav {
   text-decoration: underline;
 }
 
-/* --------- Hamburger --------- */
-#hamburger-nav {
-  display: none;
-}
-
-.hamburger-menu {
-  display: inline-block;
-  position: relative;
-}
-
-.hamburger-icon {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
-  width: 30px;
-  cursor: pointer;
-}
-
-.hamburger-icon span {
-  height: 3px;
-  background: black;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-links {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  flex-direction: column;
-  background: white;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  padding: 1rem;
-}
-
-.menu-links li {
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-.menu-links a {
-  font-size: 1rem;
-  color: #333;
-}
-
-/* --------- Section Styles --------- */
+/* --- SECTIONS --- */
 section {
   padding: 6rem 10%;
   margin-top: 5vh;
@@ -133,7 +96,7 @@ section {
   color: #444;
 }
 
-/* --------- Buttons --------- */
+/* --- BUTTONS --- */
 .btn-container {
   display: flex;
   justify-content: center;
@@ -147,7 +110,7 @@ section {
   border: none;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  font-size: 0.95rem;
 }
 
 .btn-color-1 {
@@ -170,7 +133,7 @@ section {
   color: #fff;
 }
 
-/* --------- Social Icons --------- */
+/* --- ICONS --- */
 #socials-container {
   display: flex;
   justify-content: center;
@@ -179,12 +142,22 @@ section {
 }
 
 .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 28px;
+  width: 28px;
   cursor: pointer;
+  object-fit: contain;
 }
 
-/* --------- Experience --------- */
+/* --- SKILLS GRID --- */
+.skills-grid .details-container {
+  background: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* --- EXPERIENCE & PROJECTS --- */
 .experience-details-container {
   display: flex;
   flex-direction: column;
@@ -199,31 +172,10 @@ section {
   border-left: 4px solid #0077b6;
 }
 
-.article-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  justify-content: center;
-}
-
-article {
-  text-align: center;
-  width: 120px;
-}
-
-/* --------- Projects --------- */
-.color-container {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
 .project-title {
-  font-size: 1.25rem;
   color: #0077b6;
-  margin: 1rem 0;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-btn {
@@ -240,7 +192,7 @@ article {
   color: #fff;
 }
 
-/* --------- Contact --------- */
+/* --- CONTACT --- */
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
@@ -266,17 +218,12 @@ article {
   width: 2.2rem;
 }
 
-/* --------- Footer --------- */
+/* --- FOOTER --- */
 footer {
   background: #e0f7fa;
   padding: 2rem;
   text-align: center;
   margin-top: 3rem;
-}
-.icon {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
 }
 
 footer .nav-links {
@@ -290,7 +237,7 @@ footer p {
   color: #555;
 }
 
-/* --------- Responsive --------- */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
@@ -313,19 +260,5 @@ footer p {
 
   .btn-container {
     flex-direction: column;
-  }
-
-  #hamburger-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-  }
-
-  #desktop-nav {
-    display: none;
-  }
-
-  .menu-links.open {
-    display: flex;
   }
 }
