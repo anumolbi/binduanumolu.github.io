@@ -1,49 +1,30 @@
-/* General Layout */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f7f9fc;
+  color: #222;
 }
 
-/* Header Section */
-header.hero {
-  background: linear-gradient(135deg, #0077b6, #00b4d8);
+header {
+  background: #222;
   color: #fff;
   padding: 3em 1em;
   text-align: center;
 }
 
-.hero-content h1 {
-  font-size: 2.8em;
-  margin-bottom: 0.3em;
-}
-
-.hero-content p {
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
-
-nav a {
+header nav a {
   color: #fff;
   margin: 0 1em;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+header nav a:hover {
   text-decoration: underline;
 }
 
-/* Sections */
 section {
-  padding: 2em 10%;
+  padding: 4em 10%;
   max-width: 1100px;
   margin: auto;
 }
@@ -54,77 +35,51 @@ section h2 {
   color: #0077b6;
 }
 
-/* Skills */
-.skills-list {
+.skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  list-style: none;
-  margin-top: 1em;
-  padding-left: 0;
+  gap: 10px;
 }
 
-.skills-list li {
-  background: #e0f7fa;
-  color: #0077b6;
+.skills-grid span {
+  background: #0077b6;
+  color: #fff;
   padding: 0.5em 1em;
-  border-radius: 20px;
-  font-weight: bold;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
 }
 
-/* Projects & Experience Cards */
 .project-card {
   background: #fff;
-  border-left: 4px solid #00b4d8;
-  border-radius: 8px;
   padding: 1.5em;
-  margin-bottom: 1.5em;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin: 1em 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .project-card h3 {
+  margin-top: 0;
   color: #023e8a;
-  margin-bottom: 0.5em;
-}
-
-.project-card p,
-.project-card ul {
-  margin-bottom: 0.5em;
 }
 
 .project-card a {
   color: #0077b6;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .project-card a:hover {
   text-decoration: underline;
 }
 
-/* Contact Section */
-#contact a {
-  color: #0077b6;
-  text-decoration: none;
-}
-
-#contact a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
 footer {
+  background: #eee;
   text-align: center;
-  padding: 1em;
-  background: #e0f7fa;
-  color: #333;
-  margin-top: 2em;
+  padding: 1.5em;
+  margin-top: 4em;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  nav a {
+  header nav a {
     display: block;
     margin: 0.5em 0;
   }
